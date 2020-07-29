@@ -3,10 +3,15 @@ import UIKit
 class MainView: UIView {
 
   lazy var eventsCollectionView: UICollectionView = {
-    let evetnsCollectionView = UICollectionView()
-    evetnsCollectionView.frame = bounds
-    evetnsCollectionView.register(eventsCell.self, forCellWithReuseIdentifier: "eventsCell")
-    return evetnsCollectionView
+    let layout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .horizontal
+    let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+    cv.translatesAutoresizingMaskIntoConstraints = false
+    cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "eventsCell")
+//    let evetnsCollectionView = UICollectionView()
+//    evetnsCollectionView.frame = bounds
+//    evetnsCollectionView.register(eventsCell.self, forCellWithReuseIdentifier: "eventsCell")
+    return cv
   }()
   
   override init(frame: CGRect) {
@@ -20,8 +25,14 @@ class MainView: UIView {
   
   private func commonInit() {
     addSubview(eventsCollectionView)
+    constrains()
   }
   
+  
+  private func constrains() {
+    eventsCollectionView.translatesAutoresizingMaskIntoConstraints = false
+    [eventsCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 0), eventsCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0), eventsCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: 0), safeAreaLayoutGuide.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: 0)].forEach{$0.isActive = true }
+  }
 
 }
 
