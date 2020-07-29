@@ -2,36 +2,24 @@ import UIKit
 
 class ViewController: UIViewController {
   
-    fileprivate let eventsCollectionView: UICollectionView = {
-      let layout = UICollectionViewFlowLayout()
-      layout.scrollDirection = .horizontal
-      let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-      cv.translatesAutoresizingMaskIntoConstraints = false
-      cv.register(EventsCell.self, forCellWithReuseIdentifier: "eventsCell")
-      return cv
-    }()
+  let mainView = MainView()
+
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.addSubview(eventsCollectionView)
-    setupContrains()
+    view.backgroundColor = .white
+    view.addSubview(mainView)
     setupDelegation()
     
    
   }
   
   private func setupDelegation() {
-    eventsCollectionView.delegate = self
-    eventsCollectionView.dataSource = self
+    mainView.eventsCollectionView.delegate = self
+    mainView.eventsCollectionView.dataSource = self
   }
   
-  private func setupContrains() {
-    eventsCollectionView.backgroundColor = .blue
-    [eventsCollectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
-    eventsCollectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-    eventsCollectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40), eventsCollectionView.heightAnchor.constraint(equalToConstant: view.frame.height / 2)].forEach{$0.isActive = true }
-    
-  }
+
 }
 
 extension ViewController:  UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
