@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  MCUITest
-//
-//  Created by Olimpia on 7/25/20.
-//  Copyright © 2020 Olimpia. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -15,7 +7,7 @@ class ViewController: UIViewController {
       layout.scrollDirection = .horizontal
       let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
       cv.translatesAutoresizingMaskIntoConstraints = false
-      cv.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "eventsCell")
+      cv.register(EventsCell.self, forCellWithReuseIdentifier: "eventsCell")
       return cv
     }()
 
@@ -48,7 +40,8 @@ extension ViewController:  UICollectionViewDelegateFlowLayout, UICollectionViewD
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath)
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "eventsCell", for: indexPath) as? EventsCell else { return UICollectionViewCell() }
+    cell.name.text = "TEST"
     cell.backgroundColor = .red
     return cell 
   }
