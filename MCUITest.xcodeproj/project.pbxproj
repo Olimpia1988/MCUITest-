@@ -87,6 +87,7 @@
 		1235535924CC5DC90046CFD7 /* MCUITest */ = {
 			isa = PBXGroup;
 			children = (
+				1235538E24E3ECAB0046CFD7 /* UIHelpers */,
 				1235538B24D215320046CFD7 /* Models */,
 				1235538624D215040046CFD7 /* Views */,
 				1235538724D2150B0046CFD7 /* Controllers */,
@@ -154,9 +155,16 @@
 			isa = PBXGroup;
 			children = (
 				1235538924D2152C0046CFD7 /* EventModel.swift */,
-				1235538C24E3E4FE0046CFD7 /* UIUtilities.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1235538E24E3ECAB0046CFD7 /* UIHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				1235538C24E3E4FE0046CFD7 /* UIUtilities.swift */,
+			);
+			path = UIHelpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
