@@ -18,6 +18,8 @@
 		1235538324D20B290046CFD7 /* EventsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235538224D20B290046CFD7 /* EventsCell.swift */; };
 		1235538A24D2152C0046CFD7 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235538924D2152C0046CFD7 /* EventModel.swift */; };
 		1235538D24E3E4FE0046CFD7 /* UIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235538C24E3E4FE0046CFD7 /* UIUtilities.swift */; };
+		1235539024E3ED370046CFD7 /* CircularImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235538F24E3ED370046CFD7 /* CircularImage.swift */; };
+		1235539224E3EDD90046CFD7 /* CircularButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1235539124E3EDD90046CFD7 /* CircularButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		1235538224D20B290046CFD7 /* EventsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsCell.swift; sourceTree = "<group>"; };
 		1235538924D2152C0046CFD7 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
 		1235538C24E3E4FE0046CFD7 /* UIUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIUtilities.swift; sourceTree = "<group>"; };
+		1235538F24E3ED370046CFD7 /* CircularImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularImage.swift; sourceTree = "<group>"; };
+		1235539124E3EDD90046CFD7 /* CircularButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,11 +91,11 @@
 		1235535924CC5DC90046CFD7 /* MCUITest */ = {
 			isa = PBXGroup;
 			children = (
-				1235538E24E3ECAB0046CFD7 /* UIHelpers */,
 				1235538B24D215320046CFD7 /* Models */,
 				1235538624D215040046CFD7 /* Views */,
 				1235538724D2150B0046CFD7 /* Controllers */,
 				1235538824D215130046CFD7 /* Cells */,
+				1235538E24E3ECAB0046CFD7 /* UIHelpers */,
 				1235538524D214EE0046CFD7 /* AppDelegates */,
 				1235538424D214B50046CFD7 /* AssistingFiles */,
 				1235536824CC5DCF0046CFD7 /* Info.plist */,
@@ -163,6 +167,8 @@
 			isa = PBXGroup;
 			children = (
 				1235538C24E3E4FE0046CFD7 /* UIUtilities.swift */,
+				1235538F24E3ED370046CFD7 /* CircularImage.swift */,
+				1235539124E3EDD90046CFD7 /* CircularButton.swift */,
 			);
 			path = UIHelpers;
 			sourceTree = "<group>";
@@ -274,7 +280,9 @@
 				1235538324D20B290046CFD7 /* EventsCell.swift in Sources */,
 				1235538A24D2152C0046CFD7 /* EventModel.swift in Sources */,
 				1235538D24E3E4FE0046CFD7 /* UIUtilities.swift in Sources */,
+				1235539024E3ED370046CFD7 /* CircularImage.swift in Sources */,
 				1235535D24CC5DC90046CFD7 /* SceneDelegate.swift in Sources */,
+				1235539224E3EDD90046CFD7 /* CircularButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
